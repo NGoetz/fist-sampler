@@ -100,7 +100,7 @@ namespace FistSampler {
   {
     int hypersurface_filetype = round(params.parameters["hypersurface_filetype"]);
 
-    if (hypersurface_filetype < 0 || hypersurface_filetype > 2) {
+    if (hypersurface_filetype < 0 || hypersurface_filetype > 3) {
       std::cout << "Invalid hypersurface input file type! Aborting..." << "\n";
       exit(1);
     }
@@ -110,6 +110,9 @@ namespace FistSampler {
     }
     else if (hypersurface_filetype == 2) {
       ReadParticlizationHypersurfaceMUSIC(params.hypersurface_file, hypersurface);
+    }
+    else if (hypersurface_filetype == 3) {
+      ReadParticlizationHypersurfaceVHLLE(params.hypersurface_file, hypersurface);
     }
   }
 
