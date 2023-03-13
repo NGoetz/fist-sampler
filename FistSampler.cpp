@@ -108,6 +108,8 @@ int main(int argc, char* argv[]) {
     event_writer = new EventWriter(run_parameters.output_file);
   else if (lround(run_parameters.parameters["output_format"]) == 1)
     event_writer = new EventWriterForUrqmd(run_parameters.output_file);
+  else if (lround(run_parameters.parameters["output_format"]) == 2)
+    event_writer = new EventWriterForSmash(run_parameters.output_file);
 
   ofstream fout_events(run_parameters.output_file);
 
