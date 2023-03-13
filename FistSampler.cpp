@@ -123,7 +123,7 @@ int main(int argc, char* argv[]) {
   // Loop through the events
   for (long long event_number = 0; event_number < run_parameters.nevents; ++event_number) {
     // Sample the primordial hadrons
-    SimpleEvent evt = evtgen->GetEvent();
+    SimpleEvent evt = evtgen->GetEvent(false); // don't perform final decays here already
 
     // Perform the decays, if necessary
     if (lround(run_parameters.parameters["decays"]) != 0) {
