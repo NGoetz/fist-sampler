@@ -52,7 +52,7 @@ namespace FistSampler {
         {"finite_widths",        0},   // Resonance widths treatment: 0 - zero width, 1 - energy-dependent Breit-Wigner
         {"hypersurface_filetype",2},   // 0 - Native ascii, 1 - Native binary, 2 - MUSIC binary
         {"decays", 1},                 // 0 - no decays, 1 - use the stability flags from the list, 2 - strong decays, 3 - strong + electromagnetic, 4 - strong + electromagnetic + weak decays (pi-K-p in the final state), 10 - match the particle list from UrQMD
-        {"output_format", 0},          // 0 - native ascii, 1 - tailored for UrQMD afterburner at https://github.com/jbernhard/urqmd-afterburner
+        {"output_format", 0},          // 0 - native ascii, 1 - tailored for UrQMD afterburner at https://github.com/jbernhard/urqmd-afterburner, 2 - tailored for SMASH afterburner
         {"b",     0.},                 // Excluded volume parameter for baryons (in fm^3)
         {"radB", -1.},                 // Baryon hard-core radius (in fm). If negative (default), its value is inferred from excluded-volume parameter b
         {"rescaleTmu", 0},             // Rescale the values of T and mu to match energy and baryon densities from hydro, most relevant when EV-HRG model used, less so for Id-HRG. Note that the hypersurface MUST correspond to constant energy density of edens
