@@ -243,13 +243,13 @@ namespace FistSampler {
       thermalfist::ParticlizationHypersurfaceElement elem;
 
       double ds0, ds1, ds2, ds3, u0, u1, u2, u3, T, muB, muS, muQ, tau, x, y,
-          eta, edens, rhoB, tmp;
+          eta, edens, rhoB, Pi;
 
       // This so far only works with a hacked version in hammelmann/add_edens_rhoB_freezeout in the vhlle repo
       instream >> tau >> x >> y >> eta >> ds0 >> ds1 >> ds2 >> ds3 >>
                   u0 >> u1 >> u2 >> u3 >> T >> muB >> muQ >> muS;
       for (int i=0; i<10; i++) instream >> elem.pi[i]; // pi_cart(10)
-      instream >> tmp >> edens >> rhoB; // tmp = bulk pressure
+      instream >> Pi  >> edens >> rhoB; // tmp = bulk pressure
       double u_sqr = u0 * u0 - u1 * u1 - u2 * u2 - u3 * u3;
 
       elem.edens = edens;
@@ -264,6 +264,7 @@ namespace FistSampler {
       elem.x = x;
       elem.y = y;
       elem.eta = eta;
+      elem.Pi = Pi;
 
       // transform everything to cartesian coordinates
       elem.u[0] = u0;

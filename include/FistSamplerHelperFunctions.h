@@ -235,6 +235,8 @@ namespace FistSampler {
     evtgen->SetEVUseSPR((lround(run_parameters.parameters["EVfastmode"]) != 0));
 
     bool shear_correction = (lround(run_parameters.parameters["shear_correction"]) != 0);
+    bool bulk_correction = (lround(run_parameters.parameters["bulk_correction"]) != 0);
+    double speed_of_sound_squared = (run_parameters.parameters["speed_of_sound_squared"]);
     evtgen->SetShearCorrection(shear_correction);
 
     return evtgen;
